@@ -31,7 +31,7 @@ from plumbum.cmd import mkdir  # pytype: disable=import-error
 from plumbum.cmd import rm  # pytype: disable=import-error
 from plumbum.cmd import sudo  # pytype: disable=import-error
 from plumbum.cmd import tar  # pytype: disable=import-error
-from PyInquirer import prompt
+from InquirerPy import prompt
 
 
 level_int = {'CRITICAL': 50, 'ERROR': 40, 'WARNING': 30, 'INFO': 20,
@@ -269,7 +269,7 @@ class Daedalus():
         Run end user prompt with supplied questions and return the selected
         answers
         """
-        answers = prompt(questions, style=custom_style_2)
+        answers = prompt(questions=questions, style=custom_style_2)
         return answers
 
     @staticmethod
