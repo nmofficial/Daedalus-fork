@@ -1,6 +1,7 @@
 docker==5.0.3
 docker-compose==1.29.2
 dovesnap==1.0.10
-PyInquirer==1.0.3
+InquirerPy==0.3.4
 pbr==5.9.0
 plumbum==1.7.2
+prompt-toolkit==3.0.30
