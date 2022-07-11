@@ -16,7 +16,6 @@ from daedalus.validators import IMSIValidator
 from daedalus.validators import MCCValidator
 from daedalus.validators import MNCValidator
 from daedalus.validators import NumberValidator
-from examples import custom_style_2
 from plumbum import FG  # pytype: disable=import-error
 from plumbum import local  # pytype: disable=import-error
 from plumbum import TF  # pytype: disable=import-error
@@ -31,8 +30,17 @@ from plumbum.cmd import mkdir  # pytype: disable=import-error
 from plumbum.cmd import rm  # pytype: disable=import-error
 from plumbum.cmd import sudo  # pytype: disable=import-error
 from plumbum.cmd import tar  # pytype: disable=import-error
-from InquirerPy import prompt
+from InquirerPy import prompt, get_style
 
+custom_style = get_style({
+    "separator": '#6C6C6C',
+    "questionmark": '#FF9D00 bold',
+    "selected": '#5F819D',
+    "pointer": '#FF9D00 bold',
+    "instruction": '',  # default
+    "answer": '#5F819D bold',
+    "question": '',
+}, style_override=False)
 
 level_int = {'CRITICAL': 50, 'ERROR': 40, 'WARNING': 30, 'INFO': 20,
              'DEBUG': 10}
